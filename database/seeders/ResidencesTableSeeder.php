@@ -3,8 +3,9 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\Residence;
 
-class DatabaseSeeder extends Seeder
+class ResidencesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,6 +14,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call([ResidencesTableSeeder::class]);
+        Residence::factory(10)->create();
     }
 }
