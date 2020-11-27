@@ -17,4 +17,14 @@ class House extends Model
     protected $fillable = [
         'residence_id', 'owner_id', 'block', 'number'
     ];
+
+    protected $casts = [
+        'created_at' => 'date:Y-m-d H:m:s',
+        'updated_at' => 'date:Y-m-d H:m:s',
+    ];
+
+    public function Residence()
+    {
+        return $this->belongsTo('App\Models\Residence');
+    }
 }

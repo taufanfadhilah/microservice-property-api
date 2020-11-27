@@ -17,4 +17,14 @@ class Residence extends Model
     protected $fillable = [
         'name', 'address', 'phone'
     ];
+
+    protected $casts = [
+        'created_at' => 'date:Y-m-d H:m:s',
+        'updated_at' => 'date:Y-m-d H:m:s',
+    ];
+
+    public function Houses()
+    {
+        return $this->hasMany('App\Models\House');
+    }
 }
