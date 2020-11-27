@@ -17,6 +17,7 @@ class CreateResidencesTable extends Migration
             $table->id();
             $table->string('name', 100);
             $table->text('address');
+            $table->string('phone', 100);
             $table->timestamps();
         });
     }

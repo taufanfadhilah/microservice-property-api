@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\Residence;
+use App\Models\House;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class ResidenceFactory extends Factory
+class HouseFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Residence::class;
+    protected $model = House::class;
 
     /**
      * Define the model's default state.
@@ -22,9 +22,10 @@ class ResidenceFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->company,
-            'address' => $this->faker->address,
-            'phone' => $this->faker->tollFreePhoneNumber
+            'residence_id' => $this->faker->numberBetween(1, 10),
+            'owner_id' => $this->faker->numberBetween(1, 10),
+            'block' => strtoupper($this->faker->randomletter),
+            'number' => $this->faker->numberBetween(10, 15),
         ];
     }
 }

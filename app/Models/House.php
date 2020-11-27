@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Residence extends Model
+class House extends Model
 {
     use HasFactory;
 
@@ -15,6 +15,6 @@ class Residence extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'address', 'phone'
+        'residence_id', 'owner_id', 'block', 'number'
     ];
 }
